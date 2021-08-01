@@ -1,0 +1,63 @@
+---
+import Layout from '../components/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Skills from '../components/About/Skills.astro';
+---
+
+<Layout>
+    <main>
+        <header>
+            <div>
+                <img width="150" height="150" src="/assets/ProfilePhoto.jpg" alt="Picture of me">
+                <h1>TJ Cuevas</h1>
+                <p style="width: 50%; margin: auto;">
+                    Full stack web developer with over seven years of experience developing client facing applications on the .NET stack, and
+                    over three years of experience working with React. Proven experience delivering results in both enterprise and startup
+                    environments, with a focus on code quality and delivering a delightful user experience.
+                </p>
+            </div>
+        </header>
+        <section>
+            <h2>Skills</h2>
+            <div class="skills">
+                <Skills title="Front End" imageSource="/assets/js.svg" />
+                <Skills title="Back End" />
+                <Skills title="Soft Skills" />
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    header {
+        background-color: var(--primary);
+        text-align: center;
+        padding: 4rem 2rem;
+        color: var(--font-color-secondary);
+    }
+
+    header img {
+        display: block;
+        margin: auto;
+        border-radius: 100%;
+        margin-bottom: 1.25rem;
+    }
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+</style>

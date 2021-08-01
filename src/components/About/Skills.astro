@@ -1,0 +1,61 @@
+---
+	export const title;
+	export const imageSource;
+---
+<div class="container">
+<aside>
+	<div class="front">
+		<h3>{title}</h3>
+		<img height="48" width="48" src={imageSource} />
+		<p>
+			My passion is for front end development, I blah blah blah blah. My passion is for front end development, I blah blah blah blah. My passion is for front end development, I blah blah blah blah.
+		</p>
+		<span>-></span>
+	</div>
+	<div class="back">
+		<h3>Tech</h3>
+		<b>My go to's</b>
+		<ul>
+			<li>React</li>
+			<li>Typescript</li>
+			<li>C#</li>
+		</ul>
+	</div>
+</aside>
+</div>
+<style>
+	aside {
+		border: 1px solid black;
+		border-radius: 12px;
+		padding: 1.5rem;
+		background-color: transparent;
+		display: grid;
+	}
+
+	.container:hover aside {
+		transform: rotateY(180deg);
+		transition: transform .5s ease;
+		transform-style: preserve-3d;
+	}
+
+	h3 {
+		margin-bottom: 1rem;
+	}
+
+	img {
+		margin-bottom: 1rem;
+	}
+
+.front {
+	backface-visibility: hidden;
+	grid-row: 1;
+	grid-column: 1;
+}
+
+.back {
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	grid-row: 1;
+	grid-column: 1;
+}
+</style>
