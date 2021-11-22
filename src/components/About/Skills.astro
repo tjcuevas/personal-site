@@ -1,25 +1,28 @@
 ---
-	export const title;
-	export const imageSource;
+	const { title, imageSource } = Astro.props;
 ---
 <div class="container">
 <aside>
 	<div class="front">
 		<h3>{title}</h3>
 		<img height="48" width="48" src={imageSource} />
-		<p>
-			My passion is for front end development, I blah blah blah blah. My passion is for front end development, I blah blah blah blah. My passion is for front end development, I blah blah blah blah.
-		</p>
-		<span>-></span>
+		<slot name="front">
+			<p>
+				My passion is for front end development, I blah blah blah blah. My passion is for front end development, I blah blah blah blah. My passion is for front end development, I blah blah blah blah.
+			</p>
+		</slot>
+		<span>-&gt;</span>
 	</div>
 	<div class="back">
-		<h3>Tech</h3>
-		<b>My go to's</b>
-		<ul>
-			<li>React</li>
-			<li>Typescript</li>
-			<li>C#</li>
-		</ul>
+		<slot name="back">
+			<h3>Tech</h3>
+			<b>My go to's</b>
+			<ul>
+				<li>React</li>
+				<li>Typescript</li>
+				<li>C#</li>
+			</ul>
+		</slot>
 	</div>
 </aside>
 </div>

@@ -1,6 +1,5 @@
 ---
 import Layout from '../components/Layout.astro';
-import Nav from '../components/Nav.astro';
 import Skills from '../components/About/Skills.astro';
 ---
 
@@ -12,24 +11,60 @@ import Skills from '../components/About/Skills.astro';
                 <h1>TJ Cuevas</h1>
                 <p style="width: 50%; margin: auto;">
                     Full stack web developer with over seven years of experience developing client facing applications on the .NET stack, and
-                    over three years of experience working with React. Proven experience delivering results in both enterprise and startup
-                    environments, with a focus on code quality and delivering a delightful user experience.
+                    over four years of experience working with React. Proven experience delivering results in both enterprise and startup
+                    environments, with a focus on code quality and delivering a delightful user experience. Currently working as a Senior Frontend Engineer at <a href="https://www.postscript.io/" target="_blank" rel="noopener noreferrer">Postscript</a>.
                 </p>
             </div>
         </header>
-        <section>
+        <!-- <section>
             <h2>Skills</h2>
             <div class="skills">
-                <Skills title="Front End" imageSource="/assets/js.svg" />
-                <Skills title="Back End" />
+                <Skills title="Front End" imageSource="/assets/js.svg">
+                    <p slot="front">
+                        My passion is for front end development.
+                    </p>
+                    <div slot="back">
+                    	<h3>Tech</h3>
+                        <b>My go to's</b>
+                        <ul>
+                            <li>Javascript</li>
+                            <li>React</li>
+                            <li>Typescript</li>
+                            <li>Sass</li>
+                        </ul>
+                        <b>I'm learning</b>
+                        <ul>
+                            <li>styled-components</li>
+                            <li>Rust</li>
+                        </ul>
+                    </div>
+                </Skills>
+                <Skills title="Back End">
+                    <p slot="front">
+                        Although I spend most of my time on the front end these days, the first seven years of my career were more backend focused, so I'm not afraid to jump onto the server side when needed.
+                    </p>
+                    <div slot="back">
+                    	<h3>Tech</h3>
+                        <b>My go to's</b>
+                        <ul>
+                            <li>C#</li>
+                            <li>SQL</li>
+                        </ul>
+                        <b>I'm learning</b>
+                        <ul>
+                            <li>Python</li>
+                            <li>Rust</li>
+                        </ul>
+                    </div>
+                </Skills>
                 <Skills title="Soft Skills" />
             </div>
-        </section>
+        </section> -->
     </main>
 </Layout>
 
 <style>
-    header {
+    main {
         background-color: var(--primary);
         text-align: center;
         padding: 4rem 2rem;
@@ -59,5 +94,11 @@ import Skills from '../components/About/Skills.astro';
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1rem;
+    }
+
+    @media(max-width: 768px) {
+        .skills {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
